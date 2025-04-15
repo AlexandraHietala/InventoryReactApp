@@ -5,7 +5,7 @@ import React, { useState } from "react";
 
 import '../styles/sidenav.css'
 
-export const NavSidebar = () => {
+export const NavBar = () => {
     const history = useNavigate();
     const location = useLocation();
     const [isSidebarOpen, setIsSidebarOpen] = useState(true);
@@ -79,4 +79,4 @@ export const NavSidebar = () => {
     );
 };
 
-export default NavSidebar;
+export default NavBar;

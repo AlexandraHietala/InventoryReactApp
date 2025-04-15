@@ -1,15 +1,13 @@
 import React from "react";
 
-import NavSidebar from "./NavSidebar.jsx";
-import BodyWrapper from "./BodyWrapper.jsx";
+import NavBar from "./NavBar.jsx";
+import Wrapper from "./Wrapper.jsx";
 
-export const DashboardLayout = ({ children }) => {
+export const Layout = ({ children }) => {
     return (
-        <BodyWrapper>     
-        
-        <div className="flex h-screen bg-gray-200"> 
-            <NavSidebar />
-
+        <Wrapper>     
+            <div className="flex h-screen bg-gray-200"> 
+                <NavBar />
                 <div className="flex flex-col flex-1 overflow-hidden">
                     <main className="content">
                         <section className="sm:flex-row flex flex-col flex-1">
@@ -22,8 +20,8 @@ export const DashboardLayout = ({ children }) => {
                     </main>
                 </div>
             </div>
-        </BodyWrapper>
+        </Wrapper>
     );
 };
 
-export default DashboardLayout;
+export default Layout;

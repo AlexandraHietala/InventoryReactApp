@@ -1,11 +1,11 @@
 import React from 'react';
-import DashboardLayout from '../components/Layout.jsx';
+import Layout from '../components/Layout.jsx';
 
 const HomePage = () => {
   return (
-    <DashboardLayout>
+    <Layout>
       <h2>Home Page</h2>
-    </DashboardLayout>
+    </Layout>
   )
 }
 

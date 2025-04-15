@@ -1,6 +1,6 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
-import DashboardLayout from '../components/Layout.jsx';
+import Layout from '../components/Layout.jsx';
 
 const CollectionsPage = () =>
 {
@@ -33,12 +33,12 @@ const CollectionsPage = () =>
         </table>;
 
     return (
-        <DashboardLayout>
+        <Layout>
             <div>
                 <h1 id="tableLabel">Collections</h1>
                 {contents}
             </div>
-        </DashboardLayout>
+        </Layout>
     );
 
     async function populateCollectionData() {
