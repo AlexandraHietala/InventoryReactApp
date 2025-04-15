@@ -1,4 +1,4 @@
-namespace InventoryApp.Server
+namespace InventoryReactApp.Server
 {
     public class ItemComment: Base
     {

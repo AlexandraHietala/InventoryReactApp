@@ -1,12 +1,12 @@
 import { Navigation } from "react-minimal-side-navigation";
-import { useHistory, useLocation } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import Icon from "awesome-react-icons";
 import React, { useState } from "react";
 
 import "react-minimal-side-navigation/lib/ReactMinimalSideNavigation.css";
 
 export const NavSidebar = () => {
-    const history = useHistory();
+    const history = useNavigate();
     const location = useLocation();
     const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
@@ -50,7 +50,7 @@ export const NavSidebar = () => {
                 <Navigation
                     activeItemId={location.pathname}
                     onSelect={({ itemId }) => {
-                        history.push(itemId);
+                        history(itemId);
                     }}
                     items={[
                         {
@@ -76,18 +76,6 @@ export const NavSidebar = () => {
                                     elemBefore: () => <Icon name="coffee" />
                                 }
                             ]
-                        },
-                        {
-                            title: "Another Tab",
-                            itemId: "/another",
-                            subNav: [
-                                {
-                                    title: "Teams",
-                                    itemId: "/another/teams"
-                                    // Optional
-                                    // elemBefore: () => <Icon name="calendar" />
-                                }
-                            ]
                         }
                     ]}
                 />
@@ -103,7 +91,7 @@ export const NavSidebar = () => {
                             }
                         ]}
                         onSelect={({ itemId }) => {
-                            history.push(itemId);
+                            history(itemId);
                         }}
                     />
                 </div>
@@ -111,3 +99,5 @@ export const NavSidebar = () => {
         </React.Fragment>
     );
 };
+
+export default NavSidebar;

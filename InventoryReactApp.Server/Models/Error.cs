@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace InventoryApp.Server
+namespace InventoryReactApp.Server
 {
     public class Error
     {

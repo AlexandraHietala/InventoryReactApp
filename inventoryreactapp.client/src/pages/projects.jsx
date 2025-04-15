@@ -1,6 +1,5 @@
 import React from 'react';
-
-import {DashboardLayout} from '../components/Layout';
+import DashboardLayout from '../components/Layout.jsx';
 
 const ProjectsPage = () => {
   return (
