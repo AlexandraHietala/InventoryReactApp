@@ -1,7 +1,9 @@
+import React from 'react';
 import { useEffect, useState } from 'react';
-import './App.css';
+import DashboardLayout from '../components/Layout.jsx';
 
-function App() {
+const CollectionsPage = () =>
+{
     const [collections, setCollections] = useState();
 
     useEffect(() => {
@@ -31,10 +33,12 @@ function App() {
         </table>;
 
     return (
-        <div>
-            <h1 id="tableLabel">Collections</h1>
-            {contents}
-        </div>
+        <DashboardLayout>
+            <div>
+                <h1 id="tableLabel">Collections</h1>
+                {contents}
+            </div>
+        </DashboardLayout>
     );
 
     async function populateCollectionData() {
@@ -46,4 +50,4 @@ function App() {
     }
 }
 
-export default App;
+export default CollectionsPage;

@@ -25,7 +25,7 @@ namespace InventoryReactApp.Server.Controllers
             return await GetCollections();
         }
 
-        public async Task<List<Collection>> GetCollections()
+        private async Task<List<Collection>> GetCollections()
         {
             List<Collection> collections = new List<Collection>();
 

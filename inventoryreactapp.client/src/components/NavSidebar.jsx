@@ -3,7 +3,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 import Icon from "awesome-react-icons";
 import React, { useState } from "react";
 
-import "react-minimal-side-navigation/lib/ReactMinimalSideNavigation.css";
+import '../styles/sidenav.css'
 
 export const NavSidebar = () => {
     const history = useNavigate();
@@ -15,15 +15,8 @@ export const NavSidebar = () => {
             {/* Sidebar Overlay */}
             <div
                 onClick={() => setIsSidebarOpen(false)}
-                className={`fixed inset-0 z-20 block transition-opacity bg-black opacity-50 lg:hidden ${isSidebarOpen ? "block" : "hidden"
-                    }`}
+                className={`fixed inset-0 z-20 block transition-opacity bg-black opacity-50 lg:hidden ${isSidebarOpen ? "block" : "hidden"}`}
             />
-
-            <div className="absolute right-0">
-                <a href="https://github.com/abhijithvijayan/react-minimal-side-navigation">
-                    View on GitHub
-                </a>
-            </div>
 
             <div>
                 <button
@@ -42,11 +35,11 @@ export const NavSidebar = () => {
             >
                 <div className="flex items-center justify-center mt-10 text-center py-6">
                     <span className="mx-2 text-2xl font-semibold text-black">
-                        react-minimal-side-navigation
+                        Inventory
                     </span>
                 </div>
 
-                {/* https://github.com/abhijithvijayan/react-minimal-side-navigation */}
+                {/* Navigation */}
                 <Navigation
                     activeItemId={location.pathname}
                     onSelect={({ itemId }) => {
@@ -56,26 +49,12 @@ export const NavSidebar = () => {
                         {
                             title: "Home",
                             itemId: "/home",
-                            // Optional
-                            elemBefore: () => <Icon name="coffee" />
+                            elemBefore: () => <Icon name="circle" />
                         },
                         {
-                            title: "About",
-                            itemId: "/about",
-                            elemBefore: () => <Icon name="user" />,
-                            subNav: [
-                                {
-                                    title: "Projects",
-                                    itemId: "/about/projects",
-                                    // Optional
-                                    elemBefore: () => <Icon name="cloud-snow" />
-                                },
-                                {
-                                    title: "Members",
-                                    itemId: "/about/members",
-                                    elemBefore: () => <Icon name="coffee" />
-                                }
-                            ]
+                            title: "Collections",
+                            itemId: "/collections",
+                            elemBefore: () => <Icon name="book" />
                         }
                     ]}
                 />
@@ -87,7 +66,7 @@ export const NavSidebar = () => {
                             {
                                 title: "Settings",
                                 itemId: "/settings",
-                                elemBefore: () => <Icon name="activity" />
+                                elemBefore: () => <Icon name="settings" />
                             }
                         ]}
                         onSelect={({ itemId }) => {
