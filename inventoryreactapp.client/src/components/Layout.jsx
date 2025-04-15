@@ -1,13 +1,13 @@
 import React from "react";
 
-import NavBar from "./NavBar.jsx";
+import SideBar from "./SideBar.jsx";
 import Wrapper from "./Wrapper.jsx";
 
 export const Layout = ({ children }) => {
     return (
         <Wrapper>     
             <div className="flex h-screen bg-gray-200"> 
-                <NavBar />
+                <SideBar />
                 <div className="flex flex-col flex-1 overflow-hidden">
                     <main className="content">
                         <section className="sm:flex-row flex flex-col flex-1">
