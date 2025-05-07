@@ -103,8 +103,14 @@
     color: rgba(31,41,55,var(--tw-text-opacity))
 }
 
+.hidden-element {
+    display: none;
+}
+
 .table {
-    display: table
+    display: table;
+    text-align: center;
+    width: 95%;
 }
 
 @-webkit-keyframes spin {

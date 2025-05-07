@@ -11,12 +11,12 @@ const CollectionsPage = () =>
     }, []);
 
     const contents = collections === undefined
-        ? <p><em>Loading...</em></p>
+        ? <p><br /><br /><br /><em>Loading...</em></p>
         : <table className="table table-striped" aria-labelledby="tableLabel">
             <thead>
                 <tr>
-                    <th>ID</th>
-                    <th>Name</th>
+                    <th class="hidden-element">ID</th>
+                    <th>Collection</th>
                     <th>Description</th>
                 </tr>
 
@@ -24,7 +24,7 @@ const CollectionsPage = () =>
             <tbody>
                 {collections.map(collection =>
                     <tr key={collection.id}>
-                        <td>{collection.id}</td>
+                        <td class="hidden-element">{collection.id}</td>
                         <td>{collection.collectionName}</td>
                         <td>{collection.description}</td>
                     </tr>
@@ -34,10 +34,8 @@ const CollectionsPage = () =>
 
     return (
         <Layout>
-            <div>
-                <h1 id="tableLabel">Collections</h1>
+                <h2 id="tableLabel">Collections</h2>
                 {contents}
-            </div>
         </Layout>
     );
 
